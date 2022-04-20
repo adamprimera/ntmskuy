@@ -12,6 +12,8 @@
 </head>
 
 <body class="bg-primary">
+    <?= $env ?>
+
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <?= $content ?>
