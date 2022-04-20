@@ -1,38 +1,36 @@
 @charset "UTF-8";
 
 :root {
-	/* palletes (seafoam) */
-	--bs-primary: #06794f;
-	--bs-secondary: #0fa28b;
-	--bs-success: #3ac97c;
-	--bs-info: #9d46cd;
-	--bs-warning: #ebb20c;
-	--bs-danger: #d73f30;
+	--bs-blue: #0061f2;
+	--bs-indigo: #5800e8;
+	--bs-purple: #6900c7;
+	--bs-pink: #e30059;
+	--bs-red: #e81500;
+	--bs-orange: #f76400;
+	--bs-yellow: #f4a100;
+	--bs-green: #00ac69;
+	--bs-teal: #00ba94;
+	--bs-cyan: #00cfd5;
+	--bs-white: #fff;
+	--bs-gray: #69707a;
+	--bs-gray-dark: #363d47;
+	--bs-gray-100: #f2f6fc;
+	--bs-gray-200: #e0e5ec;
+	--bs-gray-300: #d4dae3;
+	--bs-gray-400: #c5ccd6;
+	--bs-gray-500: #a7aeb8;
+	--bs-gray-600: #69707a;
+	--bs-gray-700: #4a515b;
+	--bs-gray-800: #363d47;
+	--bs-gray-900: #212832;
+	--bs-primary: #0061f2;
+	--bs-secondary: #6900c7;
+	--bs-success: #00ac69;
+	--bs-info: #00cfd5;
+	--bs-warning: #f4a100;
+	--bs-danger: #e81500;
 	--bs-light: #f2f6fc;
 	--bs-dark: #212832;
-
-	/* palletes (hover) */
-	--bs-primary-hover: #055c3c;
-	--bs-primary-pagination-hover: #009c59;
-	--bs-primary-border-hover: #044930;
-	--bs-primary-rgb-hover: 5, 92, 55;
-
-	--bs-secondary-hover: #0c826e;
-	--bs-secondary-pagination-hover: #096354;
-	--bs-secondary-border-hover: #14b398;
-	--bs-secondary-rgb-hover: 17, 156, 132;
-
-	/* pallete rgb (seafoam) */
-	--bs-primary-rgb: 6, 121, 79;
-	--bs-secondary-rgb: 15, 162, 139;
-	--bs-success-rgb: 58, 201, 124;
-	--bs-info-rgb: 157, 70, 205;
-	--bs-warning-rgb: 235, 178, 12;
-	--bs-danger-rgb: 215, 63, 48;
-	--bs-light-rgb: 242, 246, 252;
-	--bs-dark-rgb: 33, 40, 50;
-
-	/* colors */
 	--bs-black: #000;
 	--bs-white: #fff;
 	--bs-red: #e81500;
@@ -41,12 +39,10 @@
 	--bs-green: #00ac69;
 	--bs-teal: #00ba94;
 	--bs-cyan: #00cfd5;
-	--bs-blue: #1fad70;
+	--bs-blue: #0061f2;
 	--bs-indigo: #5800e8;
 	--bs-purple: #6900c7;
 	--bs-pink: #e30059;
-
-	/* soft colors */
 	--bs-red-soft: #f1e0e3;
 	--bs-orange-soft: #f3e7e3;
 	--bs-yellow-soft: #f2eee3;
@@ -63,32 +59,25 @@
 	--bs-info-soft: #daf2f8;
 	--bs-warning-soft: #f2eee3;
 	--bs-danger-soft: #f1e0e3;
-
-	/* gray colors */
-	--bs-gray: #69707a;
-	--bs-gray-dark: #363d47;
-	--bs-gray-100: #f2f6fc;
-	--bs-gray-200: #e0e5ec;
-	--bs-gray-300: #d4dae3;
-	--bs-gray-400: #c5ccd6;
-	--bs-gray-500: #a7aeb8;
-	--bs-gray-600: #69707a;
-	--bs-gray-700: #4a515b;
-	--bs-gray-800: #363d47;
-	--bs-gray-900: #212832;
-
-	/* colors rgb */
+	--bs-primary-rgb: 0, 97, 242;
+	--bs-secondary-rgb: 105, 0, 199;
+	--bs-success-rgb: 0, 172, 105;
+	--bs-info-rgb: 0, 207, 213;
+	--bs-warning-rgb: 244, 161, 0;
+	--bs-danger-rgb: 232, 21, 0;
+	--bs-light-rgb: 242, 246, 252;
+	--bs-dark-rgb: 33, 40, 50;
 	--bs-black-rgb: 0, 0, 0;
 	--bs-white-rgb: 255, 255, 255;
-	--bs-red-rgb: 215, 63, 48;
+	--bs-red-rgb: 232, 21, 0;
 	--bs-orange-rgb: 247, 100, 0;
-	--bs-yellow-rgb: 235, 178, 12;
-	--bs-green-rgb: 58, 201, 124;
+	--bs-yellow-rgb: 244, 161, 0;
+	--bs-green-rgb: 0, 172, 105;
 	--bs-teal-rgb: 0, 186, 148;
-	--bs-cyan-rgb: 157, 70, 205;
-	--bs-blue-rgb: 6, 121, 79;
+	--bs-cyan-rgb: 0, 207, 213;
+	--bs-blue-rgb: 0, 97, 242;
 	--bs-indigo-rgb: 88, 0, 232;
-	--bs-purple-rgb: 15, 162, 139;
+	--bs-purple-rgb: 105, 0, 199;
 	--bs-pink-rgb: 227, 0, 89;
 	--bs-red-soft-rgb: 241, 224, 227;
 	--bs-orange-soft-rgb: 243, 231, 227;
@@ -110,30 +99,15 @@
 	--bs-black-rgb: 0, 0, 0;
 	--bs-body-color-rgb: 105, 112, 122;
 	--bs-body-bg-rgb: 242, 246, 252;
-
-	/* fonts */
-	--bs-font-sans-serif: "Metropolis", -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-		"Liberation Mono", "Courier New", monospace;
-
-	/* gradients */
-	--bs-gradient: linear-gradient(
-		180deg,
-		rgba(255, 255, 255, 0.15),
-		rgba(255, 255, 255, 0)
-	);
-
-	/* fonts */
-	--bs-body-font-family: Metropolis, -apple-system, BlinkMacSystemFont, Segoe UI,
-		Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-		Segoe UI Symbol, Noto Color Emoji;
+	--bs-font-sans-serif: "Metropolis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	--bs-body-font-family: Metropolis, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 	--bs-body-font-size: 1rem;
 	--bs-body-font-weight: 400;
 	--bs-body-line-height: 1.5;
 	--bs-body-color: #69707a;
-	--bs-body-bg: var(--bs-light);
+	--bs-body-bg: #f2f6fc;
 }
 
 *,
@@ -22477,4 +22451,3 @@ pre[class*="language-"] {
 .token.variable {
 	color: #ff6666;
 }
-

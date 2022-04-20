@@ -5,7 +5,7 @@
                 <!-- Basic login form-->
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                     <div class="card-header justify-content-center">
-                        <h3 class="fw-medium my-4 text-center">Manajemen HR Quiz</h3>
+                        <h3 class="fw-medium my-4 text-center">Warehouse NTM</h3>
                     </div>
                     <div class="card-body">
                         <!-- Login form-->
