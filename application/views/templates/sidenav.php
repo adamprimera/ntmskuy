@@ -178,7 +178,7 @@
     function loadMenu() {
         clearSidenav();
 
-        var restURL = api_hr_url + "getMenu";
+        var restURL = api_ntm_url + "getMenu";
 
         $.ajax({
             type: "GET",
