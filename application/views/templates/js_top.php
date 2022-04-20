@@ -66,7 +66,34 @@
     }
 </script>
 
-
+<script>
+    (function($) {
+        $.fn.buttonLoader = function(action) {
+            var self = $(this);
+            //start loading animation
+            if (action == 'start') {
+                if ($(self).attr("disabled") == "disabled") {
+                    e.preventDefault();
+                }
+                //disable buttons when loading state
+                $('.has-spinner').attr("disabled", "disabled");
+                $(self).attr('data-btn-text', $(self).text());
+                //binding spinner element to button and changing button text
+                $(self).html('<span class="spinner"><i class="fa fa-spinner fa-spin"></i></span>');
+                $(self).addClass('active');
+                $(self).attr('disabled', true);
+            }
+            //stop loading animation
+            if (action == 'stop') {
+                $(self).html($(self).attr('data-btn-text'));
+                $(self).removeClass('active');
+                //enable buttons after finish loading
+                $('.has-spinner').removeAttr("disabled");
+                $(self).attr('disabled', false);
+            }
+        }
+    })(jQuery);
+</script>
 
 <script>
     // sweetalert 2 toast
@@ -84,7 +111,7 @@
             }
         })
 
-        Toast.fire({
+        return Toast.fire({
             icon: icon,
             title: title
         })
