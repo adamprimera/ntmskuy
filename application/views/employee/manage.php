@@ -51,7 +51,7 @@
         <div class="card card-header-actions">
             <div class="card-header">Pegawai <button class="btn btn-primary btn-sm" id="btn-add"><i data-feather="plus"></i>Add New</button></div>
             <div class="card-body">
-                <div class="table-responsive-md">
+                <div class="table-responsive-lg">
                     <table id="datatables" class="table table-striped table-bordered table-sm text-sm text-center">
                         <thead>
                             <tr class="text-nowrap text-center">
@@ -59,10 +59,12 @@
                                 <th>Foto</th>
                                 <th>NIP</th>
                                 <th>Nama</th>
+                                <th>Departemen</th>
                                 <th>TTL</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Alamat</th>
                                 <th>Telp</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -74,10 +76,12 @@
                                 </td>
                                 <td>1910259503</td>
                                 <td>Adam Rachman</td>
+                                <td>Business Control & Compliance</td>
                                 <td>Malang, 30 Maret 1995</td>
                                 <td>L</td>
                                 <td>Arga Park Residence Kav 2 Malang</td>
                                 <td>082264361579</td>
+                                <td><i class="text-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Non Aktif" data-feather="x-circle"></i></td>
                                 <td class="text-nowrap text-center">
                                     <button class="btn btn-datatable btn-icon btn-transparent-dark me-2" onclick="updateEmployeeDialog()"><i data-feather="more-vertical"></i></button>
                                     <button class="btn btn-datatable btn-icon btn-transparent-dark" onclick="deleteEmployee()"><i data-feather="trash-2"></i></button>
@@ -85,16 +89,18 @@
                             </tr>
 
                             <tr class="align-middle">
-                                <td class="text-center">1</td>
+                                <td class="text-center">2</td>
                                 <td class="text-center">
                                     <div class="avatar avatar-xxl"><img src="https://i.pravatar.cc/300" class="avatar-img border border-success img-fluid mx-auto d-block" alt="foto-pegawai"></div>
                                 </td>
-                                <td>1910259503</td>
+                                <td>2003259503</td>
                                 <td>Moh Sochron</td>
+                                <td>Business Control & Compliance</td>
                                 <td>Tuban, 25 Februari 1995</td>
                                 <td>L</td>
                                 <td>Jl Raya Bandulan Gang 1 A</td>
                                 <td>082264361579</td>
+                                <td><i class="text-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Aktif" data-feather="check-circle"></i></td>
                                 <td class="text-nowrap text-center">
                                     <button class="btn btn-datatable btn-icon btn-transparent-dark me-2" onclick="updateEmployeeDialog()"><i data-feather="more-vertical"></i></button>
                                     <button class="btn btn-datatable btn-icon btn-transparent-dark" onclick="deleteEmployee()"><i data-feather="trash-2"></i></button>
@@ -250,8 +256,19 @@
         body += '</div>';
         body += '</div>';
 
-        // foto pegawai
         body += '<div class="col-lg-4">';
+
+        body += '<div class="form-group">';
+        body += '<label for="date">Department</label>';
+        body += '<div class="input-group mb-3">';
+        body += '<select class="form-select form-control-solid form-select-sm" required>';
+        body += '<option value="PMD">PMD</option>';
+        body += '<option value="SKM">SKM</option>';
+        body += '<option value="SKT">SKT</option>';
+        body += '</select>';
+        body += '<button class="btn btn-primary btn-sm" type="button" id="button-addon2"><i data-feather="plus-circle"></i></button>';
+        body += '</div>';
+        body += '</div>';
 
         body += '<div class="form-group">';
         body += '<label for="date">Status Pegawai</label>';
@@ -277,7 +294,8 @@
         body += '</form>';
         document.getElementById("modal-body").innerHTML = body;
 
-        litepickerRange($('#birth-date'));
+        feather.replace();
+
 
         var footer = '';
         footer += '<button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Tutup</button><button class="btn btn-primary btn-sm" type="button" onclick="btnAddEmployee()">Simpan</button>';
@@ -304,7 +322,7 @@
         dialog.addClass("modal-xl");
 
         var title = '';
-        title += 'Tambah Pegawai';
+        title += 'Edit Pegawai';
         document.getElementById("modal-title").innerHTML = title;
 
         var body = '';
@@ -344,7 +362,7 @@
         body += '<div class="col-md-6">';
         body += '<div class="form-group">';
         body += '<label for="date">Tanggal Lahir</label>';
-        body += '<input class="form-control form-control-solid form-control-sm" type="text" value="1995/03/30">';
+        body += '<input class="form-control form-control-solid form-control-sm" type="text" id="birth-date" value="1995/03/30">';
         body += '</div>';
         body += '</div>';
 
@@ -431,6 +449,18 @@
         body += '<div class="col-lg-4">';
 
         body += '<div class="form-group">';
+        body += '<label for="date">Department</label>';
+        body += '<div class="input-group mb-3">';
+        body += '<select class="form-select form-control-solid form-select-sm" required>';
+        body += '<option value="PMD">PMD</option>';
+        body += '<option value="SKM">SKM</option>';
+        body += '<option value="SKT">SKT</option>';
+        body += '</select>';
+        body += '<button class="btn btn-primary btn-sm" type="button" id="button-addon2"><i data-feather="plus-circle"></i></button>';
+        body += '</div>';
+        body += '</div>';
+
+        body += '<div class="form-group">';
         body += '<label for="date">Status Pegawai</label>';
         body += '<select class="form-select form-control-solid form-select-sm">';
         body += '<option value="Aktif">Aktif</option>';
@@ -453,6 +483,8 @@
         body += '</div>';
         body += '</form>';
         document.getElementById("modal-body").innerHTML = body;
+
+        feather.replace();
 
         var footer = '';
         footer += '<button class="btn btn-secondary btn-sm" type="button" data-bs-dismiss="modal">Tutup</button><button class="btn btn-primary btn-sm" type="button" onclick="btnEditEmployee()">Simpan</button>';

@@ -147,29 +147,3 @@
         return swal;
     }
 </script>
-
-<script>
-    function litepickerRange(el) {
-        const litepickerRangePlugin = el;
-        if (litepickerRangePlugin) {
-            const picker = new Litepicker({
-                element: litepickerRangePlugin,
-                singleMode: false,
-                numberOfMonths: 2,
-                numberOfColumns: 2,
-                format: 'MMM DD, YYYY',
-                tooltipText: {
-                    one: 'day',
-                    other: 'days'
-                },
-                tooltipNumber: (totalDays) => {
-                    return totalDays;
-                },
-                plugins: ['mobilefriendly'],
-                mobilefriendly: {
-                    breakpoint: 480,
-                }
-            });
-        }
-    }
-</script>

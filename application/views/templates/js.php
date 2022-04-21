@@ -20,3 +20,18 @@
 
 <!-- PickerJS Script JS -->
 <script src="<?= base_url(); ?>assets/vendor/pickerjs/picker.min.js"></script>
+
+<script>
+    function litepickerSingle(el) {
+        const input = el[0];
+        if (input) {
+            const picker = new Litepicker({
+                element: input,
+                plugins: ['mobilefriendly'],
+                mobilefriendly: {
+                    breakpoint: 480,
+                }
+            });
+        }
+    }
+</script>
